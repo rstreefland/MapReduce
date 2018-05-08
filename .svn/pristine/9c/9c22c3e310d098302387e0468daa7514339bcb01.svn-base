@@ -1,0 +1,18 @@
+package uk.co.streefland.rhys.mapreduce.mapreduce;
+
+import java.util.List;
+
+/**
+ * Handles the execution of the shuffle phase
+ */
+public abstract class Shuffler {
+
+    public List<Pair<String, List>> execute(List<Pair> input) {
+        List<Pair<String, List>> output;
+
+        output = shuffle(input);
+        return output;
+    }
+
+    public abstract List<Pair<String, List>> shuffle(List<Pair> input);
+}

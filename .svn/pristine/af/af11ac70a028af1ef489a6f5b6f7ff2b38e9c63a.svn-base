@@ -1,0 +1,9 @@
+package uk.co.streefland.rhys.mapreduce.outputs;
+
+/**
+ * Interface for all outputs produced by the program
+ */
+public interface Output {
+
+    void execute();
+}

@@ -1,0 +1,95 @@
+package uk.co.streefland.rhys.mapreduce.output;
+
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import uk.co.streefland.rhys.mapreduce.data.Airport;
+import uk.co.streefland.rhys.mapreduce.data.Flight;
+import uk.co.streefland.rhys.mapreduce.framework.Pair;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Prints out the number of passengers on each flights
+ */
+public class FlightPassengerCounter extends Output {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final List<Pair> flights;
+
+    public FlightPassengerCounter(List<Pair> flights) {
+        this.flights = flights;
+    }
+
+    /**
+     * Prints the output to the console
+     */
+    public void toConsole() {
+        System.out.println("\nPassengers on each flight");
+        System.out.println("-------------------------");
+
+        for (Pair flightPair : flights) {
+            Flight flight = (Flight) flightPair.getValue();
+            List<String> passengers = flight.getPassengers();
+
+            System.out.println(flightPair.getKey() + ": " + passengers.size());
+        }
+    }
+
+    public void toTextFile() throws FileNotFoundException {
+
+        String fileName = "output/flightpassengercount.txt";
+        logger.info("Writing flight passenger count to file: " + fileName);
+        PrintWriter out = new PrintWriter(fileName);
+
+        out.println("\nPassengers on each flight");
+        out.println("-------------------------");
+
+        for (Pair flightPair : flights) {
+            Flight flight = (Flight) flightPair.getValue();
+            List<String> passengers = flight.getPassengers();
+
+            out.println(flightPair.getKey() + ": " + passengers.size());
+        }
+
+        out.close();
+    }
+
+    public void toPDFFile() throws DocumentException, FileNotFoundException {
+
+        String fileName = "output/flightpassengercount.pdf";
+        logger.info("Writing flight passenger count to file: " + fileName);
+
+        // Create and open the document
+        Document document = new Document();
+        PdfWriter.getInstance(document, new FileOutputStream(fileName));
+        document.open();
+
+        document.add(getPDFTitle());
+
+        Paragraph title1 = new Paragraph("Passengers on each flight", FONT[1]);
+        title1.setSpacingAfter(15);
+        document.add(title1);
+
+        PdfPTable table = new PdfPTable(2);
+        table.setHorizontalAlignment(Element.ALIGN_LEFT);
+
+        for (Pair flightPair : flights) {
+            Flight flight = (Flight) flightPair.getValue();
+            List<String> passengers = flight.getPassengers();
+
+            table.addCell(new Phrase("" + flightPair.getKey()));
+            table.addCell(new Phrase("" + passengers.size()));
+        }
+
+        document.add(table);
+        document.add(getPDFFooter());
+        document.close();
+    }
+}

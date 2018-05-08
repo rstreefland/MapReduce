@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://svn.sse.reading.ac.uk/svn/bv011021/MapReduce/branches" />
+                  <option value="https://svn.sse.reading.ac.uk/svn/bv011021/MapReduce/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://svn.sse.reading.ac.uk/svn/bv011021/MapReduce/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="UMLDiagramComponent">
+    <diagram name="mapreduce">
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.Driver" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.data.Flight" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.data.Airport" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Pair" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Mapper" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Reducer" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Shuffler" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.Output" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.MileageCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.FlightInventory" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.AirportFlightCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.FlightPassengerCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.utility.FileScanner" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.utility.DistanceCalculator" />
+      <command command-class="de.frag.umlplugin.uml.command.ConnectClassesCommand" />
+      <command command-class="de.frag.umlplugin.uml.command.AddDependentClassesCommand" psi-class="uk.co.streefland.rhys.mapreduce.utility.DistanceCalculator" />
+      <command command-class="de.frag.umlplugin.uml.command.ConnectSingleClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.MileageCounter.MileageMapper" />
+      <compartment-visibility>
+        <show-fields class="uk.co.streefland.rhys.mapreduce.output.MileageCounter.MileageMapper" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.output.MileageCounter.MileageMapper" />
+      </compartment-visibility>
+    </diagram>
+    <diagram name="mapreduce4">
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.Driver" />
+      <command command-class="de.frag.umlplugin.uml.command.AddDependentClassesCommand" psi-class="uk.co.streefland.rhys.mapreduce.Driver" />
+      <compartment-visibility />
+    </diagram>
+    <diagram name="mapreduce2">
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.Driver" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.data.Flight" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.data.Airport" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Pair" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Mapper" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Reducer" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Shuffler" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.Output" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.MileageCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.FlightInventory" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.AirportFlightCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.FlightPassengerCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.utility.FileScanner" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.utility.DistanceCalculator" />
+      <command command-class="de.frag.umlplugin.uml.command.AddDependentClassesCommand" psi-class="uk.co.streefland.rhys.mapreduce.Driver" />
+      <compartment-visibility>
+        <show-fields class="uk.co.streefland.rhys.mapreduce.framework.Reducer" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.output.Output" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.output.MileageCounter" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.output.AirportFlightCounter" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.output.FlightPassengerCounter" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.utility.DistanceCalculator" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.framework.Pair" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.Driver" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.utility.FileScanner" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.framework.Mapper" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.data.Airport" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.framework.Shuffler" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.data.Flight" />
+        <show-fields class="uk.co.streefland.rhys.mapreduce.output.FlightInventory" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.framework.Reducer" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.output.Output" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.output.MileageCounter" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.output.AirportFlightCounter" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.output.FlightPassengerCounter" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.utility.DistanceCalculator" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.framework.Pair" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.Driver" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.utility.FileScanner" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.framework.Mapper" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.data.Airport" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.framework.Shuffler" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.data.Flight" />
+        <show-methods class="uk.co.streefland.rhys.mapreduce.output.FlightInventory" />
+      </compartment-visibility>
+    </diagram>
+    <diagram name="mapreduce3">
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.Driver" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.data.Flight" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.data.Airport" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Pair" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Mapper" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Reducer" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.framework.Shuffler" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.Output" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.MileageCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.FlightInventory" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.AirportFlightCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.output.FlightPassengerCounter" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.utility.FileScanner" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="uk.co.streefland.rhys.mapreduce.utility.DistanceCalculator" />
+      <command command-class="de.frag.umlplugin.uml.command.ConnectClassesCommand" />
+      <compartment-visibility />
+    </diagram>
+  </component>
+</project>

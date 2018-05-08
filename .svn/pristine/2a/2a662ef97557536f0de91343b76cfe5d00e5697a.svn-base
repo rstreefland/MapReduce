@@ -1,0 +1,94 @@
+package uk.co.streefland.rhys.mapreduce.data;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
+
+/**
+ * Represents a single flight and all its attributes
+ */
+public class Flight {
+
+    private final String flightId;
+    private final String sourceAirportCode;
+    private final String destinationAirportCode;
+    private final String departureTime;
+    private final String arrivalTime;
+    private final String duration;
+
+    private String passenger;
+    private List<String> passengers;
+
+    /**
+     * This constructor is used during the map phase when time calculations are required
+     */
+    public Flight(String flightId, String sourceAirportCode, String destinationAirportCode, String departureTime, String duration, String passenger) {
+        this.flightId = flightId;
+        this.sourceAirportCode = sourceAirportCode;
+        this.destinationAirportCode = destinationAirportCode;
+        this.passenger = passenger;
+
+        // Convert String to long and calculate arrival time
+        long departureTimeNumerical = Long.parseLong(departureTime);
+        long durationNumerical = Long.parseLong(duration) * 60; // Convert minutes to seconds
+        long arrivalTimeNumerical = departureTimeNumerical + durationNumerical;
+
+        // Create the time format and set the GMT timezone
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+
+        // Convert times to time format
+        this.departureTime = sdf.format(new Date(departureTimeNumerical*1000L));
+        this.arrivalTime = sdf.format(new Date(arrivalTimeNumerical*1000L));
+        this.duration = sdf.format(new Date(durationNumerical*1000L));
+    }
+
+
+    /**
+     * This constructor is used during the reduce phase when times have already been calculated and formatted by the map phase
+     */
+    public Flight(String flightId, String sourceAirportCode, String destinationAirportCode, String departureTime, String arrivalTime, String duration, List<String> passengers) {
+        this.flightId = flightId;
+        this.sourceAirportCode = sourceAirportCode;
+        this.destinationAirportCode = destinationAirportCode;
+        this.passengers = passengers;
+
+        // Times are already in the correct time format thus no conversion is required
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.duration = duration;
+    }
+
+    public String getFlightId() {
+        return flightId;
+    }
+
+    public String getSourceAirportCode() {
+        return sourceAirportCode;
+    }
+
+    public String getDestinationAirportCode() {
+        return destinationAirportCode;
+    }
+
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+    public String getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public String getPassenger() {
+        return passenger;
+    }
+
+    public List<String> getPassengers() {
+        return passengers;
+    }
+}

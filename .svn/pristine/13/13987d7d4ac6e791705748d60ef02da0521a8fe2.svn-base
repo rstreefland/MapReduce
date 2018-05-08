@@ -1,0 +1,50 @@
+package uk.co.streefland.rhys.mapreduce.framework;
+
+import uk.co.streefland.rhys.mapreduce.Driver;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+/**
+ * Handles the execution of the reduce phase
+ */
+public abstract class Reducer {
+
+    public final ExecutorService executorService = Executors.newFixedThreadPool(Driver.REDUCER_THREADS);
+    public final List<Future> futures = new ArrayList<>();
+    public final List<Pair> output = new ArrayList<>();
+
+    public List<Pair> execute(List<Pair<String, List>> input) {
+
+        for (Pair<String, List> pair : input) {
+            Future future = executorService.submit(() -> reduce(pair, input));
+            futures.add(future);
+        }
+
+        collectResults(output);
+        return output;
+    }
+
+    public void collectResults(List<Pair> output) {
+
+        for (Future future : futures) {
+            try {
+                Pair outputPair = (Pair) future.get();
+
+                if (outputPair != null) {
+                    output.add(outputPair);
+                }
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
+        }
+
+        executorService.shutdown();
+    }
+
+    public abstract Pair reduce(Pair<String, List> input, List<Pair<String, List>> shuffled);
+}

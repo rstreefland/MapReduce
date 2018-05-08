@@ -1,0 +1,46 @@
+package uk.co.streefland.rhys.mapreduce.framework;
+
+import uk.co.streefland.rhys.mapreduce.Main;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.*;
+
+/**
+ * Handles the execution of the map phase
+ */
+public abstract class Mapper {
+
+    public final ExecutorService executorService = Executors.newFixedThreadPool(Main.MAPPER_THREADS);
+    public final List<Future> futures = new ArrayList<>();
+    public final List<Pair> output = new ArrayList<>();
+
+    public List<Pair> execute(String[] input) {
+
+        for (String line : input) {
+            Future future = executorService.submit(() -> map(line));
+            futures.add(future);
+        }
+
+        collectResults(output);
+        return output;
+    }
+
+    public void collectResults(List<Pair> output) {
+        for (Future future : futures) {
+            try {
+                Pair outputPair = (Pair) future.get();
+
+                if (outputPair != null) {
+                    output.add(outputPair);
+                }
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
+        }
+
+        executorService.shutdown();
+    }
+
+    public abstract Pair map(String input);
+}

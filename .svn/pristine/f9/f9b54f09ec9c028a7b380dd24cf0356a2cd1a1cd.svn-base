@@ -1,0 +1,27 @@
+package uk.co.streefland.rhys.mapreduce.mapreduce;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Handles the execution of the reduce pha
+ */
+public abstract class Reducer {
+
+    public List<Pair> execute(List<Pair<String, List>> input) {
+
+        List<Pair> output = new ArrayList<>();
+
+        for (Pair<String, List> pair : input) {
+
+            Pair outputPair = reduce(pair, input);
+
+            if (outputPair != null) {
+                output.add(outputPair);
+            }
+        }
+        return output;
+    }
+
+    public abstract Pair reduce(Pair<String, List> input, List<Pair<String, List>> shuffled);
+}

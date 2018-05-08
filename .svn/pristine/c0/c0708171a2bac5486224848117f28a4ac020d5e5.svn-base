@@ -1,0 +1,61 @@
+package uk.co.streefland.rhys.mapreduce.utility;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ * Reads the contents of a text file and stores it as a String array of lines
+ */
+public class FileScanner {
+
+    /**
+     * Performs the file reading operation
+     * @param filePath The text file
+     * @return String array of lines
+     * @throws IOException
+     */
+    public String[] read(String filePath) throws IOException {
+        int lineCount = countLines(filePath);
+
+        return readLines(filePath, lineCount);
+    }
+
+    /**
+     * Counts the number of lines in a given text file
+     * @param filePath The text file
+     * @return The number of lines
+     * @throws IOException
+     */
+    private int countLines(String filePath) throws IOException {
+        int lines = 0;
+
+        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        while (br.readLine() != null) lines++;
+        br.close();
+
+        return lines;
+    }
+
+    /**
+     * Reads each line of a given text file into a String array
+     * @param filePath The text file
+     * @param lineCount Number of lines in the file
+     * @return String array of lines
+     * @throws IOException
+     */
+    private String[] readLines(String filePath, int lineCount) throws IOException {
+        String[] data = new String[lineCount];
+
+        int currentLine = 0;
+        String line;
+
+        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        while ((line = br.readLine()) != null) {
+            data[currentLine] = line;
+            currentLine++;
+        }
+
+        return data;
+    }
+}

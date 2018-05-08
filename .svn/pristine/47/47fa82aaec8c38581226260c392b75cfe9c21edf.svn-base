@@ -1,0 +1,36 @@
+package uk.co.streefland.rhys.mapreduce.utility;
+
+/**
+ * Calculates the distance in nautical miles from one set of coordinates to another set of coordinates
+ * @author Rhys Streefland
+ * @version 1.0
+ */
+public class DistanceCalculator {
+
+    /**
+     * Calculates distance in nautical miles from one set of coordinates to another set of coordinates
+     * @param lat1 Latitude of the first airport
+     * @param lon1 Longitude of the first airport
+     * @param lat2 Latitude of the first airport
+     * @param lon2 Longitude of the first airport
+     * @return Distance in nautical miles
+     */
+    public static double calculate(double lat1, double lon1, double lat2, double lon2) {
+
+        double theta = lon1 - lon2;
+        double dist = Math.sin(degreesToRadians(lat1)) * Math.sin(degreesToRadians(lat2)) + Math.cos(degreesToRadians(lat1)) * Math.cos(degreesToRadians(lat2)) * Math.cos(degreesToRadians(theta));
+        dist = Math.acos(dist);
+        dist = radiansToDegrees(dist);
+        dist = dist * 60 * 1.1515 * 0.8684;
+
+        return (dist);
+    }
+
+    private static double degreesToRadians(double deg) {
+        return (deg * Math.PI / 180.0);
+    }
+
+    private static double radiansToDegrees(double rad) {
+        return (rad * 180 / Math.PI);
+    }
+}

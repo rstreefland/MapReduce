@@ -1,0 +1,37 @@
+package uk.co.streefland.rhys.mapreduce.outputs;
+
+import uk.co.streefland.rhys.mapreduce.data.Flight;
+import uk.co.streefland.rhys.mapreduce.mapreduce.Pair;
+
+import java.util.List;
+
+/**
+ * Prints out the number of passengers on each flights
+ */
+public class FlightPassengerCounter implements Output {
+
+    private final List<Pair> flights;
+
+    public FlightPassengerCounter(List<Pair> flights) {
+        this.flights = flights;
+    }
+
+    public void execute() {
+        printOutput();
+    }
+
+    /**
+     * Prints the output to the console
+     */
+    private void printOutput() {
+        System.out.println("\nPassengers on each flight");
+        System.out.println("-------------------------\n");
+
+        for (Pair flightPair : flights) {
+            Flight flight = (Flight) flightPair.getValue();
+            List<String> passengers = flight.getPassengers();
+
+            System.out.println(flightPair.getKey() + ": " + passengers.size());
+        }
+    }
+}

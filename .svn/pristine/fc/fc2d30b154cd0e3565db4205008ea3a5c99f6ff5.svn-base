@@ -1,0 +1,216 @@
+package uk.co.streefland.rhys.mapreduce.outputs;
+
+import uk.co.streefland.rhys.mapreduce.data.Airport;
+import uk.co.streefland.rhys.mapreduce.data.Flight;
+import uk.co.streefland.rhys.mapreduce.mapreduce.Mapper;
+import uk.co.streefland.rhys.mapreduce.mapreduce.Pair;
+import uk.co.streefland.rhys.mapreduce.mapreduce.Reducer;
+import uk.co.streefland.rhys.mapreduce.mapreduce.Shuffler;
+import uk.co.streefland.rhys.mapreduce.utility.DistanceCalculator;
+
+import java.util.*;
+import java.util.concurrent.Future;
+
+/**
+ * Calculates the distance travelled by each flight and each passenger in nautical miles. Prints out both lists
+ */
+public class MileageCounter implements Output {
+
+    private final List<Pair> flights;
+    private final List<Pair> airports;
+    private List<Pair> flightMileage;
+    private List<Pair> passengerMileage;
+
+    public MileageCounter(List<Pair> flights, List<Pair> airports) {
+
+        this.flights = flights;
+        this.airports = airports;
+    }
+
+    public void execute() {
+
+        MileageMapper mileageMapper = new MileageMapper();
+        flightMileage = mileageMapper.executeFlightMapper(flights);
+
+        mileageMapper = new MileageMapper();
+        List<Pair> mappedPassengerMileage = mileageMapper.executePassengerMapper(flights);
+
+        Shuffler passengerMileageShuffler = new PassengerMileageShuffler();
+        List<Pair<String, List>> shuffledPassengerMileage = passengerMileageShuffler.execute(mappedPassengerMileage);
+
+        Reducer passengerMileageReducer = new PassengerMileageReducer();
+        passengerMileage = passengerMileageReducer.execute(shuffledPassengerMileage);
+
+        printOutput();
+    }
+
+    /**
+     * Prints the output to the console
+     */
+    private void printOutput() {
+        System.out.println("\nNautical miles of each flight");
+        System.out.println("-----------------------------\n");
+
+        for (Pair pair : flightMileage) {
+            String flightCode = (String) pair.getKey();
+            Double miles = (Double) pair.getValue();
+
+            System.out.println(flightCode + ": " + miles);
+        }
+
+        System.out.println("\nNautical miles travelled by each passenger");
+        System.out.println("------------------------------------------\n");
+
+        for (Pair pair : passengerMileage) {
+            String passengerCode = (String) pair.getKey();
+            Double miles = (Double) pair.getValue();
+            System.out.println(passengerCode + ": " + miles);
+        }
+    }
+
+    /**
+     * Maps the mileage for each flight/passenger
+     */
+    private class MileageMapper extends Mapper {
+
+        /**
+         * Map the mileage of each flight
+         * @param input MapReduced list of flights
+         * @return List of flightCode, distance pairs
+         */
+        private List<Pair> executeFlightMapper(List<Pair> input) {
+            // Map for each flight
+            for (Pair pair : input) {
+                Future future = executorService.submit(() -> map(pair));
+                futures.add(future);
+            }
+
+            collectResults(output);
+            return output;
+        }
+
+        /**
+         * Map the mileage of each passenger
+         * @param input MapReduced list of flights
+         * @return List of passenger, distance pairs
+         */
+        private List<Pair> executePassengerMapper(List<Pair> input) {
+            for (Pair pair : input) {
+
+                Flight flight = (Flight) pair.getValue();
+
+                // Map for each passenger of each flight
+                for (String passenger : flight.getPassengers()) {
+                    Future future = executorService.submit(() -> map(new Pair<>(passenger, flight)));
+                    futures.add(future);
+                }
+            }
+
+            collectResults(output);
+            return output;
+        }
+
+        /**
+         * Map function common to both passengers and flights
+         * @param pair code, flight pair
+         * @return code, distance pair
+         */
+        private Pair map(Pair pair) {
+
+            Flight flight = (Flight) pair.getValue();
+
+            Airport sourceAirport = null;
+            Airport destinationAirport = null;
+
+            // Match airportCode with corresponding airport in MapReduced airports list
+            for (Pair a : airports) {
+
+                Airport airport = (Airport) a.getValue();
+
+                if (flight.getSourceAirportCode().equals(airport.getAirportCode())) {
+                    sourceAirport = airport;
+                }
+
+                if (flight.getDestinationAirportCode().equals(airport.getAirportCode())) {
+                    destinationAirport = airport;
+                }
+            }
+
+            // Calculate the distance
+            double distance = DistanceCalculator.calculate(sourceAirport.getLatitude(), sourceAirport.getLongitude(), destinationAirport.getLatitude(), destinationAirport.getLongitude());
+
+            return new Pair<>(pair.getKey(), distance);
+        }
+
+        /**
+         * Not used for this mapper
+         */
+        public Pair map(String input) {
+            return null;
+        }
+    }
+
+    /**
+     * Shuffle and sort the miles travelled by each passenger
+     */
+    private class PassengerMileageShuffler extends Shuffler {
+
+        public List<Pair<String, List>> shuffle(List<Pair> input) {
+
+            List<Pair<String, List>> output = new ArrayList<>();
+            HashMap<String, List<Double>> passengerMileageHashMap = new HashMap<>();
+
+            // For each (key, value) pair in the list
+            for (Pair p : input) {
+
+                String passenger = (String) p.getKey();
+                Double miles = (Double) p.getValue();
+
+                // Remove duplicate keys by adding each (key, value) pair to a HashMap
+                if (!passengerMileageHashMap.containsKey(passenger)) {
+                    List<Double> values = new ArrayList<>();
+                    values.add(miles);
+                    passengerMileageHashMap.put(passenger, values);
+                } else {
+                    List<Double> values = passengerMileageHashMap.get(passenger);
+                    values.add(miles);
+                    passengerMileageHashMap.put(passenger, values);
+                }
+            }
+
+            // Add the contents of the HashMap to the output list
+            for (Map.Entry entry : passengerMileageHashMap.entrySet()) {
+                String passenger = (String) entry.getKey();
+                List mileage = (List) entry.getValue();
+
+                output.add(new Pair<>(passenger, mileage));
+            }
+
+            /* Sort the List by key */
+            output.sort(Comparator.comparing(Pair::getKey));
+
+            return output;
+        }
+    }
+
+    /**
+     * Reduces the miles travelled by each passenger on each flight into the total mileage travelled by each passenger
+     */
+    public class PassengerMileageReducer extends Reducer {
+
+        public Pair reduce(Pair<String, List> input, List<Pair<String, List>> shuffled) {
+
+            List distances = input.getValue();
+
+            double totalDistance = 0;
+
+            // sum up each distance into one total
+            for (Object object : distances) {
+                Double distance = (Double) object;
+                totalDistance = totalDistance + distance;
+            }
+
+            return new Pair<>(input.getKey(), totalDistance);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+package uk.co.streefland.rhys.mapreduce.framework;
+
+import java.util.List;
+
+/**
+ * Manages the execution of all shufflers.
+ * Shufflers must extend this class and define the shuffle method.
+ * @author Rhys Streefland
+ * @version 1.0
+ */
+public abstract class Shuffler {
+
+    /**
+     * Controls the execution of the shuffler
+     * @param input List of mapped (Key, Value) pairs
+     * @return List of shuffled (Key, List(Value)) pairs
+     */
+    public List<Pair<String, List>> execute(List<Pair> input) {
+        List<Pair<String, List>> output;
+
+        output = shuffle(input);
+        return output;
+    }
+
+    /**
+     * Abstract method to be extended by every shuffler.
+     * @param input List of mapped (Key, Value) pairs
+     * @return List of shuffled (Key, List(Value)) pairs
+     */
+    public abstract List<Pair<String, List>> shuffle(List<Pair> input);
+}

@@ -1,0 +1,481 @@
+2017-02-08 18:03:30.247 [main] INFO  uk.co.streefland.rhys.mapreduce.Driver - Passenger Airline Flights 1.0
+2017-02-08 18:03:30.250 [main] INFO  uk.co.streefland.rhys.mapreduce.Driver - CPU cores available for MapReduce: 8
+2017-02-08 18:03:30.254 [main] DEBUG uk.co.streefland.rhys.mapreduce.Driver - Mapping errors
+2017-02-08 18:03:30.304 [main] DEBUG uk.co.streefland.rhys.mapreduce.Driver - Shuffling errors
+2017-02-08 18:03:30.304 [main] DEBUG uk.co.streefland.rhys.mapreduce.Driver - Reducing errors
+2017-02-08 18:03:30.336 [main] DEBUG uk.co.streefland.rhys.mapreduce.Driver - Mapping flights
+2017-02-08 18:03:30.336 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: MBw8071P NEW:MBA8071P
+2017-02-08 18:03:30.336 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.336 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: GMO593[W NEW:GMO5938W
+2017-02-08 18:03:30.336 [pool-4-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: 4QU6245R NEW:SQU6245R
+2017-02-08 18:03:30.336 [pool-4-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: UES915*GS5 NEW:UES9151GS5
+2017-02-08 18:03:30.336 [pool-4-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.336 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: UGK NEW:CGK
+2017-02-08 18:03:30.336 [pool-4-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: XXQ4064% NEW:XXQ4064B
+2017-02-08 18:03:30.336 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: [AS NEW:LAS
+2017-02-08 18:03:30.336 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: SJD8|75RZ4 NEW:SJD8775RZ4
+2017-02-08 18:03:30.336 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.336 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: PNE8178S NEW:PME8178S
+2017-02-08 18:03:30.336 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: UMH6360YP0 NEW:YMH6360YP0
+2017-02-08 18:03:30.336 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.336 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: A;S NEW:AMS
+2017-02-08 18:03:30.351 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.351 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: VDCP164W NEW:VDC9164W
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: AM% NEW:AMS
+2017-02-08 18:03:30.351 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: CKZ313\BR4 NEW:CKZ3132BR4
+2017-02-08 18:03:30.351 [pool-4-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: :IN NEW:SIN
+2017-02-08 18:03:30.351 [pool-4-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: ]RA NEW:FRA
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: #MS NEW:AMS
+2017-02-08 18:03:30.351 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: VZT2993ME1 NEW:VZY2993ME1
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: WYu2010YH8 NEW:WYU2010YH8
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: WBE6935NU$ NEW:WBE6935NU3
+2017-02-08 18:03:30.351 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: MI^ NEW:MIA
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: vAS NEW:LAS
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: OR8 NEW:ORD
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: SI| NEW:SIN
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: FSA NEW:FRA
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: L}X NEW:LAX
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: PEe NEW:PEK
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: ;AD NEW:MAD
+2017-02-08 18:03:30.351 [pool-4-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: ~AN NEW:CAN
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: SPRb484HA6 NEW:SPR4484HA6
+2017-02-08 18:03:30.351 [pool-4-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: yEK NEW:PEK
+2017-02-08 18:03:30.351 [pool-4-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Replaced incorrect value with corrected value
+2017-02-08 18:03:30.351 [pool-4-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) Blank input line ignored
+2017-02-08 18:03:30.351 [pool-4-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightMapper - (EC) OLD: vEN NEW:DEN
+2017-02-08 18:03:30.351 [main] DEBUG uk.co.streefland.rhys.mapreduce.Driver - Shuffling flights
+2017-02-08 18:03:30.367 [main] DEBUG uk.co.streefland.rhys.mapreduce.Driver - Reducing flights
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-5] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-1] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-4] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.367 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-7] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-2] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.383 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-3] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-6] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.384 [pool-5-thread-8] DEBUG uk.co.streefland.rhys.mapreduce.Driver$FlightReducer - (EC) Removed duplicate passenger
+2017-02-08 18:03:30.385 [main] DEBUG uk.co.streefland.rhys.mapreduce.Driver - Mapping airports
+2017-02-08 18:03:30.389 [main] INFO  uk.co.streefland.rhys.mapreduce.Driver - Text file output selected
+2017-02-08 18:03:30.389 [main] DEBUG uk.co.streefland.rhys.mapreduce.output.MileageCounter - Mapping flight mileage
+2017-02-08 18:03:30.389 [main] DEBUG uk.co.streefland.rhys.mapreduce.output.MileageCounter - Mapping passenger mileage
+2017-02-08 18:03:30.405 [main] DEBUG uk.co.streefland.rhys.mapreduce.output.MileageCounter - Shuffling passenger mileage
+2017-02-08 18:03:30.405 [main] DEBUG uk.co.streefland.rhys.mapreduce.output.MileageCounter - Reducing passenger mileage
+2017-02-08 18:03:30.405 [main] INFO  uk.co.streefland.rhys.mapreduce.output.AirportFlightCounter - Writing airport flight count to file: output/airportflightcount.txt
+2017-02-08 18:03:30.405 [main] INFO  uk.co.streefland.rhys.mapreduce.output.FlightInventory - Writing list of flights to file: output/flightslist.txt
+2017-02-08 18:03:30.436 [main] INFO  uk.co.streefland.rhys.mapreduce.output.FlightPassengerCounter - Writing flight passenger count to file: output/flightpassengercount.txt
+2017-02-08 18:03:30.436 [main] INFO  uk.co.streefland.rhys.mapreduce.output.MileageCounter - Writing flight and passenger mileage to file:  output/mileage.txt
+2017-02-08 18:03:30.436 [main] INFO  uk.co.streefland.rhys.mapreduce.Driver - Output to text files completed

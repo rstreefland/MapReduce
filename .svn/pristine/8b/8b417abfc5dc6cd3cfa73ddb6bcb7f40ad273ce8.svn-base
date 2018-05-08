@@ -1,0 +1,50 @@
+package uk.co.streefland.rhys.mapreduce.outputs;
+
+import uk.co.streefland.rhys.mapreduce.data.Airport;
+import uk.co.streefland.rhys.mapreduce.mapreduce.Pair;
+
+import java.util.*;
+
+/**
+ * Prints out the number of flights from each airport
+ */
+public class AirportFlightCounter implements Output {
+
+    private final List<Pair> airports;
+
+    public AirportFlightCounter(List<Pair> airports) {
+        this.airports = airports;
+    }
+
+    public void execute() {
+        printOutput();
+    }
+
+    /**
+     * Prints the output to the console
+     */
+    private void printOutput() {
+        List<String> unusedAirports = new ArrayList<>();
+
+        System.out.println("Flights from each airport");
+        System.out.println("-------------------------\n");
+
+        for (Pair pair : airports) {
+
+            Airport airport = (Airport) pair.getValue();
+
+            if (airport.getFlightCount() == 0) {
+                unusedAirports.add(airport.getAirportName());
+            } else {
+                System.out.println(airport.getAirportName() + ": " + airport.getFlightCount());
+            }
+        }
+
+        System.out.println("\nUnused airports");
+        System.out.println("-------------------------\n");
+
+        for (String airport : unusedAirports) {
+            System.out.println(airport);
+        }
+    }
+}

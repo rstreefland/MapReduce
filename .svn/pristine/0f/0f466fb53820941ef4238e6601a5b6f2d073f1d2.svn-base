@@ -1,0 +1,13 @@
+package uk.co.streefland.rhys.mapreduce.output;
+
+import java.io.FileNotFoundException;
+
+/**
+ * Interface for all output produced by the program
+ */
+public interface Output {
+
+    void toConsole();
+
+    void toTextFile() throws FileNotFoundException;
+}

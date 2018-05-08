@@ -1,0 +1,378 @@
+package uk.co.streefland.rhys.mapreduce;
+
+import com.itextpdf.text.DocumentException;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import uk.co.streefland.rhys.mapreduce.data.Airport;
+import uk.co.streefland.rhys.mapreduce.data.Flight;
+import uk.co.streefland.rhys.mapreduce.framework.Mapper;
+import uk.co.streefland.rhys.mapreduce.framework.Pair;
+import uk.co.streefland.rhys.mapreduce.framework.Reducer;
+import uk.co.streefland.rhys.mapreduce.framework.Shuffler;
+import uk.co.streefland.rhys.mapreduce.output.*;
+import uk.co.streefland.rhys.mapreduce.utility.FileScanner;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.*;
+import java.util.concurrent.Future;
+
+/**
+ * Drives the MapReduce operations that form the basis of the four output objectives.
+ * Facilitates the output of each objective to the console, to text files, or t PDF files
+ * @author Rhys Streefland
+ * @version 1.0
+ */
+public class Driver {
+
+    private static final Logger logger = LoggerFactory.getLogger(Driver.class);
+    public static final int MAPPER_THREADS = Runtime.getRuntime().availableProcessors();
+    public static final int REDUCER_THREADS = MAPPER_THREADS;
+
+    private static List<Pair> errors;
+    private static List<Pair> flights;
+    private static List<Pair> airports;
+
+    public static void main(String[] args) {
+
+        logger.info("Passenger Airline Flights v1.0");
+        logger.info("CPU cores available for MapReduce: " + MAPPER_THREADS);
+
+        // Inputs
+        FileScanner fp = new FileScanner();
+        String[] passengerData = new String[0];
+        String[] airportData = new String[0];
+
+        try {
+            passengerData = fp.read("input/AComp_Passenger_data.csv");
+            airportData = fp.read("input/Top30_airports_LatLong.csv");
+        } catch (IOException e) {
+            logger.error("Could not read one or more input files - please check that both files are present in the input directory");
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+        // MapReduce operations
+        errors = runErrorMapReduce(passengerData);
+        flights = runFlightMapReduce(passengerData);
+        airports = runAirportMapper(airportData);
+
+        // Execute output based on program arguments
+        if (args.length > 0) {
+            String output = args[0];
+
+            switch (output) {
+                case "text": logger.info("Text file output selected"); textFilesOutput(); break;
+                case "pdf": logger.info("PDF file output selected"); pdfFilesOutput(); break;
+                default: logger.info("Defaulting to console output"); consoleOutput(); break;
+            }
+        } else {
+            logger.info("Defaulting to console output");
+            consoleOutput();
+        }
+    }
+
+    /**
+     * Runs the MapReduce operations for error detection and correction data
+     * @param passengerData The passenger data file
+     * @return A list of (error string, corrected string) pairs
+     */
+    private static List<Pair> runErrorMapReduce(String[] passengerData) {
+
+        logger.debug("Mapping errors");
+        Mapper errorMapper = new ErrorMapper();
+        List<Pair> mappedErrors = errorMapper.execute(passengerData);
+
+        logger.debug("Shuffling errors");
+        Shuffler errorShuffler = new Shuffler();
+        List<Pair<String, List>> shuffledErrors = errorShuffler.execute(mappedErrors);
+
+        logger.debug("Reducing errors");
+        Reducer errorReducer = new ErrorReducer();
+        return errorReducer.execute(shuffledErrors);
+    }
+
+    /**
+     * Runs the MapReduce operations for the flight data
+     * @param passengerData The passenger data file
+     * @return A list of (flightCode, flight object) pairs
+     */
+    private static List<Pair> runFlightMapReduce(String[] passengerData) {
+
+        logger.debug("Mapping flights");
+        Mapper flightMapper = new FlightMapper();
+        List<Pair> mappedFlights = flightMapper.execute(passengerData);
+
+        logger.debug("Shuffling flights");
+        Shuffler flightShuffler = new Shuffler();
+        List<Pair<String, List>> shuffledFlights = flightShuffler.execute(mappedFlights);
+
+        logger.debug("Reducing flights");
+        Reducer flightReducer = new FlightReducer();
+        return flightReducer.execute(shuffledFlights);
+    }
+
+    /**
+     * Runs the Map operation for the Airport data.
+     * No shuffle or reduce steps are required because there is only one of each airport in the input file
+     *
+     * @param airportData The airport data file
+     * @return A list of (flightCode, flight object) pairs
+     */
+    private static List<Pair> runAirportMapper(String[] airportData) {
+
+        logger.debug("Mapping airports");
+        Mapper airportMapper = new AirportMapper();
+        return airportMapper.execute(airportData);
+    }
+
+    /**
+     * Invokes the toConsole() method of each output class.
+     */
+    private static void consoleOutput() {
+
+        Output airportFlightCounter = new AirportFlightCounter(airports);
+        Output flightInventory = new FlightInventory(flights);
+        Output flightPassengerCounter = new FlightPassengerCounter(flights);
+        Output mileageCounter = new MileageCounter(flights, airports);
+
+        airportFlightCounter.toConsole();
+        flightInventory.toConsole();
+        flightPassengerCounter.toConsole();
+        mileageCounter.toConsole();
+    }
+
+    /**
+     * Invokes the toTextFile() method of each output class.
+     */
+    private static void textFilesOutput() {
+
+        // make output directory if it doesn't already exist
+        new File("output").mkdirs();
+
+        Output airportFlightCounter = new AirportFlightCounter(airports);
+        Output flightInventory = new FlightInventory(flights);
+        Output flightPassengerCounter = new FlightPassengerCounter(flights);
+        Output mileageCounter = new MileageCounter(flights, airports);
+
+        try {
+            airportFlightCounter.toTextFile();
+            flightInventory.toTextFile();
+            flightPassengerCounter.toTextFile();
+            mileageCounter.toTextFile();
+        } catch (FileNotFoundException e) {
+            logger.error("Could not write to one or more text files - please close any open instances of that file");
+            e.printStackTrace();
+        }
+
+        logger.info("Output to text files completed");
+    }
+
+    /**
+     * Invokes the toPDFFile() method of each output class
+     */
+    private static void pdfFilesOutput() {
+
+        // make output directory if it doesn't already exist
+        new File("output").mkdirs();
+
+        Output airportFlightCounter = new AirportFlightCounter(airports);
+        Output flightInventory = new FlightInventory(flights);
+        Output flightPassengerCounter = new FlightPassengerCounter(flights);
+        Output mileageCounter = new MileageCounter(flights, airports);
+
+        try {
+            airportFlightCounter.toPDFFile();
+            flightInventory.toPDFFile();
+            flightPassengerCounter.toPDFFile();
+            mileageCounter.toPDFFile();
+        } catch (DocumentException | FileNotFoundException e) {
+            logger.error("Could not write to one or more PDF files - please close any open instances of that file");
+            e.printStackTrace();
+        }
+
+        logger.info("Output to PDF files completed");
+    }
+
+    /**
+     * Maps each attribute and the occurrence
+     * Overrides the execute method of Mapper to provide a more specific implementation
+     */
+    private static class ErrorMapper extends Mapper {
+
+        @Override
+        public List<Pair> execute(String[] input) {
+            for (String line : input) {
+                String[] attributes = line.split(",");
+
+                for (String attribute : attributes) {
+                    Future future = executorService.submit(() -> map(attribute));
+                    futures.add(future);
+                }
+            }
+
+            collectResults(output);
+            return output;
+        }
+
+        public Pair map(String attribute) {
+            return new Pair<>(attribute, 1);
+        }
+    }
+
+    /**
+     * Performs error correction on attributes with only one occurrence.
+     */
+    private static class ErrorReducer extends Reducer {
+
+        public Pair reduce(Pair<String, List> input, List<Pair<String, List>> shuffled) {
+
+            List occurrences = input.getValue();
+
+            // if the word only occurs once it's an error
+            if (occurrences.size() == 1) {
+                return correctError(input.getKey(), shuffled);
+            }
+
+            return null;
+        }
+
+        /**
+         * Corrects an incorrect attribute by finding the attribute with the lowest Levenshtein distance in the shuffled list
+         *
+         * @param attribute The incorrect attribute
+         * @param shuffled  The shuffled list of attributes
+         * @return (incorrect, corrected) Pair
+         */
+        private Pair correctError(String attribute, List<Pair<String, List>> shuffled) {
+
+            int lowestLevenshteinDistance = Integer.MAX_VALUE;
+            String corrected = "";
+
+            // Loop through each attribute until the one with the lowest Levenshein distance is found
+            for (Pair<String, List> pair : shuffled) {
+                String candidate = pair.getKey();
+
+                // get the Levenshtein distance using Apache StringUtils
+                int levenshteinDistance = StringUtils.getLevenshteinDistance(attribute, pair.getKey());
+
+                // Only allow uppercase attributes as replacement candidates (lowercase attributes are all incorrect)
+                if ((levenshteinDistance < lowestLevenshteinDistance) && levenshteinDistance > 0 && candidate.toUpperCase().equals(candidate)) {
+                    lowestLevenshteinDistance = levenshteinDistance;
+                    corrected = candidate;
+                }
+            }
+
+            return new Pair<>(attribute, corrected);
+        }
+    }
+
+    /**
+     * Maps the flight code and creates a corresponding flight object.
+     * Replaces any error strings with the corrected ones found in the 'errors' list
+     */
+    private static class FlightMapper extends Mapper {
+
+        public Pair map(String input) {
+            String[] attributes = input.split(",");
+
+            // EC: replace incorrect values with corrected values
+            for (Pair pair : errors) {
+                for (int i = 0; i < attributes.length; i++) {
+
+                    String oldString = (String) pair.getKey();
+                    String newString = (String) pair.getValue();
+
+                    if (attributes[i].equals(oldString)) {
+                        logger.debug("(EC) Replaced incorrect value with corrected value\n OLD: " + oldString + " NEW: " + newString);
+                        attributes[i] = newString;
+                        break;
+                    }
+                }
+            }
+
+            String passenger = attributes[0];
+            String flightCode = attributes[1];
+            String sourceAirport = attributes[2];
+            String destinationAirport = attributes[3];
+            String departureTime = attributes[4];
+            String flightDuration = attributes[5];
+
+            // EC: ignore blank input
+            if (passenger.equals("") || flightCode.equals("") || sourceAirport.equals("") || destinationAirport.equals("") || departureTime.equals("0") || flightDuration.equals("0")) {
+                logger.debug("(EC) Blank input line ignored");
+                return null;
+            }
+
+            return new Pair<>(flightCode, new Flight(flightCode, sourceAirport, destinationAirport, departureTime, flightDuration, passenger));
+        }
+    }
+
+    /**
+     * Reduces the flight occurrences by consolidating the passengers into one list.
+     * Also removes any duplicate passengers for each flight
+     */
+    private static class FlightReducer extends Reducer {
+
+        public Pair reduce(Pair<String, List> input, List<Pair<String, List>> shuffled) {
+
+            List flightData = input.getValue();
+            List<String> passengers = new ArrayList<>();
+
+            for (Object object : flightData) {
+                Flight flight = (Flight) object;
+
+                // EC: Remove duplicate passengers
+                if (!passengers.contains(flight.getPassenger())) {
+                    passengers.add(flight.getPassenger());
+                } else {
+                    logger.debug("(EC) Removed duplicate passenger: " + flight.getPassenger());
+                }
+            }
+
+            Flight aFlight = (Flight) flightData.get(0);
+
+            Flight consolidatedFlight = new Flight(aFlight.getFlightId(), aFlight.getSourceAirportCode(), aFlight.getDestinationAirportCode(), aFlight.getDepartureTime(), aFlight.getArrivalTime(), aFlight.getDuration(), passengers);
+            return new Pair<>(input.getKey(), consolidatedFlight);
+        }
+    }
+
+    /**
+     * Maps the airport code and creates a corresponding airport object.
+     * Also counts the number of flights that originate from that airport.
+     */
+    private static class AirportMapper extends Mapper {
+
+        public Pair map(String input) {
+            String[] attributes = input.split(",");
+
+            // EC: account for empty line
+            if (attributes.length > 1) {
+                String airportName = attributes[0];
+                String airportCode = attributes[1];
+                String latitude = attributes[2];
+                String longitude = attributes[3];
+
+                int flightCount = 0;
+
+                // Count the number of flights originating from this airport
+                for (Pair pair : flights) {
+
+                    Flight flight = (Flight) pair.getValue();
+
+                    if (flight.getSourceAirportCode().equals(airportCode)) {
+                        flightCount++;
+                    }
+                }
+
+                return new Pair<>(airportCode, new Airport(airportName, airportCode, latitude, longitude, flightCount));
+            }
+
+            return null;
+        }
+    }
+}
+
+
